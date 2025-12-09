@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-    </head>
-    <body></body>
+    <html>
+        <head>
+            <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+        </head>
+        <body>
+            <form method="POST" action="/login">
+                <!-- Your other fields (e.g. email, password) go here -->
+                <div
+                    class="h-captcha"
+                    data-sitekey="10000000-ffff-ffff-ffff-000000000001"
+                ></div>
+                <br />
+                <!-- The hCaptcha flow is triggered and 'h-captcha-response' field
+           is automatically sent as a form field upon clicking Submit -->
+                <input type="submit" value="Submit" />
+            </form>
+        </body>
+    </html>
 </html>
